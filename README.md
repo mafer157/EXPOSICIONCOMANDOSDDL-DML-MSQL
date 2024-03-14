@@ -1,0 +1,2 @@
+# EXPOSICIONCOMANDOSDDL-DML-MSQL
+TEMAS: 13.Claves ajenas 14. Operadores
