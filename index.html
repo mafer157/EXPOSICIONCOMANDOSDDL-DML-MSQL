@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="convex" data-background-color="rgb(0, 0, 66)">
+					<h1 class="r-fit-text">BASE DE DATOS</h1></section>
+				<section data-transition="convex" data-background-color="rgb(8, 51, 162)">
+					<h1 class="r-fit-text"> CLAVES AJENAS Y OPERADORES </h1>
+				</section>
+				<section>
+					<section data-transition="convex" data-background-color="rgb(70, 70, 240)">
+						<h2 class="r-fit-text">Claves ajenas </h2>
+					</section>
+					<section data-transition="slide">
+					<h7 class="r-fit-text">¿Que es?</h7>
+					<h4>Una clave ajena es un campo o conjunto de campos en una tabla que hace referencia a la </h4> 
+					<h4>clave principal (o una clave candidata única) en otra tabla.</h4>
+					</section>
+					<section data-transition="slide">
+					<h7 class="r-fit-text">Proposito principal</h7>
+					<h4>El propósito principal de las claves ajenas es garantizar la integridad referencial de los datos.</h4>
+					<h4>Esto significa que las relaciones entre las tablas se mantienen consistentes y que no se permiten operaciones que podrían resultar en referencias a registros que no existen en la tabla relacionada. </h4>
+					</section>
+					<section data-transition="slide">
+					<h7 class="r-fit-text">Usos principales</h7>
+					<h4>1.- Establecen relaciones entre tablas.</h4>
+					<h4>2.- Mantienen la integridad referencial.</h4>	
+					<h4>3.- Imponen restricciones de integridad.</h4>
+					<h4>4.- Facilitan la normalización de la base de datos.</h4>
+					<h4>5.- Ayudan en la optimización de consultas.</h4>	
+					<h4>6.- Permiten la modificación en cascada.</h4>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex" data-background-color="rgb(0, 185, 206)"> 
+						<h2 class="r-fit-text">Dominio D</h2>
+					</section>
+					<section data-transition="concave">
+						<h2>¿Qué es?</h2>
+						<h4>En el análisis de la estructura relacional, se va a partir de los Escalares.</h4>
+						<h4>Un escalar es la menor unidad semántica de información, es decir, es un dato atómico.</h4>
+						<h4>La atomicidad se considera a nivel semántico, de modo que su descomposición produce una pérdida de significado.</h4>
+						<h4>Se define un Dominio, o Dominio Simple, como un conjunto de escalares.</h4>
+					</section>
+					<section data-transition="concave">
+						<h2>¿Para qué sirve?</h2>
+						<h4>Integridad de los datos:</h4> 
+						<h4>El dominio ayuda a garantizar la integridad de los datos al restringir los tipos de valores que se pueden almacenar en un campo determinado. Esto ayuda a prevenir la inserción de datos incorrectos o incoherentes en la base de datos.</h4>
+					</section>
+					<section data-transition="concave">
+						<h2>¿Para qué sirve?</h2>
+						<h4>Consistencia de los datos:</h4> 
+						<h4>Al definir un conjunto específico de valores permitidos para un campo, el dominio ayuda a mantener la consistencia de los datos en toda la base de datos. Esto asegura que los datos almacenados cumplan con ciertas reglas y estándares predefinidos.</h4>
+					</section>
+					<section data-transition="concave">
+						<h2>¿Para qué sirve?</h2>
+						<h4>Validación de datos:</h4> 
+						<h4>El dominio puede utilizarse para validar los datos antes de ser almacenados en la base de datos. Por ejemplo, si un campo tiene un dominio de valores enteros positivos, cualquier intento de ingresar un valor no válido (como un texto o un número negativo) será rechazado.</h4>
+					</section>
+					<section data-transition="concave">
+						<h2>¿Para qué sirve?</h2>
+						<h4>Optimización de consultas:</h4> 
+						<h4>Los dominios pueden ser utilizados en la creación de índices, lo que puede mejorar el rendimiento de las consultas al permitir búsquedas más rápidas y eficientes en la base de datos.</h4>
+					</section>
+					<section data-transition="concave">
+						<h3 class="r-fit-text">Características</h3>
+						<h6>-Cada atributo de una relación tiene asociado un Dominio Subyacente, de modo que el valor de las instancias del atributo se incluyen en él.</h6>
+						<h6>-No todos los valores del dominio subyacente deben aparecer como instancia del atributo.</h6>
+						<h6>-Diferentes atributos pueden tener asociado el mismo dominio subyacente.</h6>
+					</section>
+					<section data-transition="concave">
+						<h3 class="r-fit-text">Características</h3>
+						<h6>-Los dominios permiten eliminar errores del programador, restringiendo la comparación a atributos asociados al mismo dominio.</h6>
+						<h6>-Esto se cumple también sobre dominios que sean equivalentes aunque semánticamente diferentes.</h6>
+						<h6>-En SQL no se incluye el concepto de dominio, permitiendo comparación entre atributos equivalentes. 4 DOMIN</h6>
+					</section>
+					<section data-transition="concave">
+						<h1>Ventajas</h1>
+						<h6>-Mejora el Rendimiento: Al limitar los tipos de datos y establecer restricciones, se puede mejorar el rendimiento de las consultas y operaciones en la base de datos.</h6>
+						<h6>-Facilita la Validación: Permite una validación más efectiva de los datos de entrada, reduciendo la posibilidad de errores y asegurando que solo datos válidos se almacenen en la base de datos.</h6>
+					</section>
+					<section data-transition="concave">
+						<h1>Ventajas</h1>
+						<h6>-Integridad de Datos: Facilita la aplicación de restricciones que ayudan a mantener la integridad de los datos, evitando inconsistencias y errores.</h6>
+						<h6>-Consistencia de Datos: Un dominio garantiza que los datos almacenados en un campo cumplan con las reglas específicas, asegurando la coherencia y calidad de la información.
+						</h6>
+					</section>
+					<section data-transition="concave">
+						<h2>Desventajas</h2>
+						<h6>-Rigidez: Puede llevar a cierta rigidez, especialmente cuando es necesario cambiar las reglas o restricciones de un dominio existente, lo cual puede resultar complicado.</h6>
+						<h6>-Complejidad en el Diseño: La definición detallada de dominios puede aumentar la complejidad en el diseño de la base de datos, especialmente en sistemas grandes.</h6>
+						<h6>-Posible Pérdida de Flexibilidad: En algunos casos, la implementación estricta de dominios puede limitar la flexibilidad del sistema, especialmente si los requisitos cambian con el tiempo.</h6>
+					</section>
+					<section data-transition="concave">
+						<h2 >Ejemplo</h2>
+						<h4>Supongamos que tenemos un campo "Edad" para registrar la edad de cada empleado.</h4>
+						<h7>Dominio D para el campo "Edad":</h7>
+						<h6>-Tipo de Datos: Números enteros.</h6>
+						<h6>-Restricciones:Debe ser un número positivo. Podría tener una restricción adicional, por ejemplo, que la edad no puede ser superior a 100 años.</h6>
+					</section>
+				</section>
+				<section>
+					<section data-transition="convex" data-background-color="rgb(160, 206, 222)">
+						<h2 class="r-fit-text">Tipos de dominios por</h2>
+						<h2 class="r-fit-text"> Intensión o Extensión</h2>
+					</section>
+					<section data-transition="zoom" data-background-color="rgb(217, 229, 240)">
+						<h2 class="r-fit-text">DOMINIOS POR INTENCIÓN</h2>
+						<h4>Se refieren a las diferentes categorías de datos que pueden ser almacenadas en una base de datos, dependiendo de la intención o propósito para el cual se utilizarán.</h4>
+						<img width="600xp"; src="img/1.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>Dominio de Entidad</h3>
+						<h4>Este tipo de dominio representa entidades del mundo real, como personas, lugares u objetos.</h4>
+						<h4>Por ejemplo, en una base de datos de una biblioteca, el dominio de entidad podría incluir tablas para libros, autores y bibliotecas.</h4>
+						<img width="500xp"; src="img/2.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>Dominio de Relación</h3>
+						<h4>El dominio representa relaciones entre diferentes entidades.</h4>
+						<h4>Por ejemplo, si en una base de datos se tiene una tabla de estudiantes y otra tabla de cursos, el dominio de relación podría ser la inscripción de estudiantes en cursos.</h4>
+						<img width="800xp"; src="img/3.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>Dominio de Valor</h3>
+						<h4>Este tipo de dominio representa valores individuales dentro de una entidad o relación.</h4>
+						<h4>Por ejemplo, en una tabla de empleados, el dominio de valor para el atributo "nombre" serían los nombres de los empleados.</h4>
+						<img width="750xp"; src="img/4.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>Dominio de Tiempo</h3>
+						<h5>En este caso, el dominio representa datos relacionados con el tiempo, como fechas, horas, períodos, etc.</h5>
+						<h5>Por ejemplo, en una base de datos de reservas de vuelos, el dominio de tiempo podría incluir la fecha y hora de salida de un vuelo.</h5>
+						<img width="500xp"; src="img/5.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>Dominio de Control</h3>
+						<h4>Este tipo de dominio se refiere a datos relacionados con el control y la gestión de la base de datos misma, como permisos de usuario, registros de auditoría, etc.</h4>
+						<img width="700xp"; src="img/6.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>Dominio de Proceso</h3>
+						<h4>Este tipo de dominio se refiere a datos que representan procesos o flujos de trabajo en una organización.</h4>
+						<h4>Por ejemplo, en una base de datos de gestión de proyectos, el dominio de proceso podría incluir datos sobre las tareas asignadas a diferentes miembros del equipo.</h4>
+						<img width="600xp"; src="img/7.jpeg"/>
+					</section>
+					<section data-background-color="rgb(217, 229, 240)">
+						<h2 class="r-fit-text">TIPOS DE DOMINIOS</h2>
+						<h2 class="r-fit-text">POR SU EXTENSIÓN</h2>
+					 </section>
+					<section data-transition="zoom">
+						<h3>Genéricos (gTLD):</h3>
+						<h4>Son extensiones de dominio genéricas que no están asociadas específicamente con un país o región.</h4>
+						<h4>Comúnmente utilizadas para una variedad de propósitos, como sitios web comerciales, organizaciones, redes, información, etc.</h4>
+						<img width="500xp"; src="img/8.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>De nivel superior con código de país (ccTLD):</h3>
+						<h4>Son extensiones de dominio asociadas con un país o territorio específico.</h4>
+						<h4>Diseñadas para representar entidades geográficas y suelen reflejar el código de país ISO 3166-1 de la región.</h4>
+						<img width="450xp"; src="img/9.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>Dominios de nivel superior patrocinados (sTLD):</h3>
+						<h4>Son extensiones de dominio respaldadas o patrocinadas por organizaciones específicas o grupos de interés.</h4>
+						<h4>Creados para representar una categoría particular de entidades, como entidades gubernamentales (.gov), instituciones educativas (.edu), o el ejército (.mil).</h4>
+						<img width="500xp"; src="img/10.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>Dominios de nivel superior geográficos (geoTLD):</h3>
+						<h4>Son extensiones que están vinculadas geográficamente a una región específica.</h4>
+						<h4>Ejemplos incluyen .nyc para la ciudad de Nueva York, .london para Londres, .berlin para Berlín, etc.</h4>
+						<img width="500xp"; src="img/11.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>Dominios de nivel superior de infraestructura (iTLD):</h3>
+						<h4>Son dominios reservados para infraestructuras de Internet.</h4>
+						<h4>El ejemplo más común es .arpa.</h4>
+						<img width="500xp"; src="img/12.jpeg"/>
+					</section>
+					<section data-transition="zoom">
+						<h3>Dominios de nivel superior internacionalizados (IDN ccTLD y gTLD):</h3>
+						<h4>Permiten el uso de caracteres no ASCII en los nombres de dominio.</h4>
+						<h4>Ejemplos incluyen .рф para Rusia, .中国 para China, .भारत para India, etc.</h4>
+						<img width="500xp"; src="img/13.jpeg"/>
+					</section>
+				</section>
+				<section data-transition="convex" data-background-color="rgb(166, 189, 219)">
+					<h2>INTEGRANTES</h2>
+					<h4>Amador Salais María Fernanda</h4>
+					<h4>Jardinez Maldonado Jorge Yahir</h4>
+					<h4>Lopez Leonardo</h4>
+					<h4>Moncada Lazcano Rosalba</h4>
+					<h4>Murcia Gómez Rodolfo Sebastián</h4>
+					<h4>Sevilla Pacheco Jonathan Joel</h4>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: 'true',
+
+				progress: 'true',
+
+				slideNumber: 'all',
+
+				transition: 'slide',
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
+
